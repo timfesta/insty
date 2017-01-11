@@ -1,0 +1,10 @@
+<div class="container">
+	<h1>New Location</h1>
+	<%= form_for [@location] do |f| %>
+		<%= f.text_field :address, placeholder: "Address" %><br>
+		<%= f.text_field :longitude, placeholder: "Longitude" %><br>
+		<%= f.text_field :latitude, placeholder: "Latitude" %><br>
+		<br>
+		<%= f.submit "Submit", class:"btn btn-primary" %>
+	<% end %>	
+</div>

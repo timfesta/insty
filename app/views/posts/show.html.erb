@@ -1,2 +1,7 @@
-<%= image_tag(@post.image.url(:medium)) %>
-<%= @post.description %>
+<div class="container">
+	<%= image_tag(@post.image.url(:medium)) %><br>
+	<%= @post.description %><br>
+	<%= link_to "Add a location", new_location_path %>
+</div>
+
+

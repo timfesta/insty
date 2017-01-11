@@ -9,9 +9,9 @@ class PostsController < ApplicationController
   end
 
   def create	
-  	@post = Post.new(permit_post)
-  	if @post.save
-  		redirect_to post_path(@post)
+  	post = Post.new(post_params)
+  	if post.save
+  		redirect_to post_path(post)
   	else
   		redirect_to new_post_path
   	end
@@ -22,8 +22,8 @@ class PostsController < ApplicationController
   end
 
   private
-  def permit_post
-  	params.require(:post).permit(:picture, :description)
-  	
-  end
+    def post_params
+    	params.require(:post).permit(:image, :description)
+    end
+
 end
